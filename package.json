@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-telescope",
+  "name": "@nestjs-tools/telescope",
   "version": "1.0.0",
   "description": "A debugging and monitoring tool for NestJS applications, inspired by Laravel Telescope",
   "main": "dist/index.js",
