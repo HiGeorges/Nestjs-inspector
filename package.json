@@ -1,7 +1,7 @@
 {
-  "name": "nest-request-inspector",
+  "name": "nestjs-telescope",
   "version": "1.0.0",
-  "description": "Laravel Telescope-like request inspector for NestJS - Debug and monitor HTTP requests with a beautiful dashboard",
+  "description": "A debugging and monitoring tool for NestJS applications, inspired by Laravel Telescope",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/konlyking/nest-request-inspector"
+    "url": "https://github.com/HiGeorges/Nestjs-inspector"
   },
   "keywords": [
     "nestjs",
