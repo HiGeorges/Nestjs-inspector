@@ -1,8 +1,6 @@
-# nest-request-inspector
+# nestjs-telescope
 
 A Laravel Telescope-like request inspector for NestJS applications. Monitor and debug HTTP requests with a beautiful built-in dashboard.
-
-![Dashboard Preview](https://raw.githubusercontent.com/konlyking/nest-request-inspector/main/docs/dashboard.png)
 
 ## Features
 
@@ -16,7 +14,7 @@ A Laravel Telescope-like request inspector for NestJS applications. Monitor and 
 ## Installation
 
 ```bash
-npm install nest-request-inspector
+npm install nestjs-telescope
 ```
 
 ## Quick Start
@@ -25,7 +23,7 @@ Import the `TelescopeModule` in your app module:
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { TelescopeModule } from 'nest-request-inspector';
+import { TelescopeModule } from 'nestjs-telescope';
 
 @Module({
   imports: [
@@ -86,7 +84,7 @@ For dynamic configuration (e.g., using ConfigService):
 ```typescript
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { TelescopeModule } from 'nest-request-inspector';
+import { TelescopeModule } from 'nestjs-telescope';
 
 @Module({
   imports: [
@@ -111,7 +109,7 @@ Use the `@SkipTelescope()` decorator to exclude specific routes or controllers:
 
 ```typescript
 import { Controller, Get } from '@nestjs/common';
-import { SkipTelescope } from 'nest-request-inspector';
+import { SkipTelescope } from 'nestjs-telescope';
 
 @Controller('health')
 export class HealthController {
@@ -159,7 +157,7 @@ If you have a global authentication guard (like JWT), you need to exclude telesc
 
 ```typescript
 import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
-import { TelescopeModule } from 'nest-request-inspector';
+import { TelescopeModule } from 'nestjs-telescope';
 
 @Module({
   imports: [TelescopeModule.forRoot()],
@@ -205,7 +203,7 @@ TelescopeModule.forRoot({
 
 ```typescript
 import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
-import { TelescopeModule } from 'nest-request-inspector';
+import { TelescopeModule } from 'nestjs-telescope';
 import { AuthMiddleware } from './middleware/auth.middleware';
 
 @Module({
@@ -223,7 +221,7 @@ export class AppModule implements NestModule {
 ```typescript
 import { Module } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
-import { TelescopeModule, TELESCOPE_SKIP_KEY } from 'nest-request-inspector';
+import { TelescopeModule, TELESCOPE_SKIP_KEY } from 'nestjs-telescope';
 
 // In your guard, check for TELESCOPE_SKIP_KEY metadata
 // and apply your admin authentication logic
@@ -235,7 +233,7 @@ You can inject the `TelescopeService` to access recorded requests programmatical
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { TelescopeService } from 'nest-request-inspector';
+import { TelescopeService } from 'nestjs-telescope';
 
 @Injectable()
 export class MonitoringService {
